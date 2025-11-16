@@ -1,13 +1,10 @@
 FROM typesense/typesense:27.0
 
-# Create data directory
+# Create data directory (optional, base image might do it)
 RUN mkdir -p /data
 
-# Expose Typesense Port
+# Expose the HTTP port for Typesense
 EXPOSE 8108
 
-# Start Typesense with arguments
-CMD ["typesense-server", 
-     "--data-dir=/data", 
-     "--api-key=shopsphereSearchKey", 
-     "--enable-cors=true"]
+# Set the command to run the Typesense server with required arguments
+CMD ["typesense-server", "--data-dir=/data", "--api-key=shopsphereSearchKey", "--enable-cors=true"]
