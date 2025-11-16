@@ -7,4 +7,4 @@ RUN mkdir -p /data
 EXPOSE 8108
 
 # Set the command to run the Typesense server with required arguments
-CMD ["typesense-server", "--data-dir=/data", "--api-key=shopsphereSearchKey", "--enable-cors=true"]
+CMD ["typesense-server", "--data-dir=/data", "--api-key=shopsphereSearchKey", "--listen-port=8108", "--api-address=0.0.0.0", "--enable-cors=true"]
