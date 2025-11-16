@@ -8,6 +8,6 @@ EXPOSE 8108
 
 # Start Typesense with arguments
 CMD ["typesense-server",
-     "--data-dir=/data",
-     "--api-key=shopsphereSearchKey",
-     "--enable-cors=true"]
+     "--data-dir", "/data",
+     "--api-key", "shopsphereSearchKey",
+     "--enable-cors", "true"]
